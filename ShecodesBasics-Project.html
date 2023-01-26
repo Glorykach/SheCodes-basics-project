@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food website 🥗</title>
+    <style>
+        .container{
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            border-radius: 10px;
+            background: linear-gradient(to top left, #ffcc39 0%, #f2d4bc 100%);
+        }
+        h1{
+            text-align: center;
+            color: crimson;
+        }
+        h2{
+            text-align: center;
+            color: black;
+           
+        }
+        img{
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        p{
+            font-size: 15px;
+            font-weight: 200;
+            margin-bottom: 20px 0 10px;
+            line-height: 1.1;
+        }
+        .click-here{
+            text-decoration: none;
+            color: crimson;
+            font-size: 15px;
+        }
+        .click-here:hover{
+            text-decoration: underline;
+        }
+         .menu-button{
+            display: block;
+            margin: 20px auto;
+            background-color: transparent;
+            color: crimson;
+            font-size: 18px;
+            padding: 15px 20px;
+            border: 2px solid white;
+            border-radius: 6px;
+            transition: all 200ms ease-in-out;
+        }
+        .menu-button:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .buy-button{
+            display: block;
+            margin: 20px auto;
+            background-color: #f4f4f4;
+            color: crimson;
+            font-size: 18px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 2, 0.3);
+            transition: all 200ms ease-in-out;
+        }
+        .buy-button:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .footer{
+            text-align: center;
+            color: black;
+        }
+        a:hover{
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        a{
+          color: crimson;
+          text-decoration: none;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+      Fastest Food Ordering Services
+      </h1>
+      <hr>
+      <h2>
+        Order your favorite food here🥗
+      </h2>
+      <button class="menu-button">
+        👉Click to view our menu
+      </button>
+      <img
+        src="https://image.freepik.com/free-photo/front-view-young-female-courier-female-worker-food-delivery-service-holding-coffee-cups-food-packages-while-showing-phone-white_140725-19994.jpg"
+        alt="Delivery woman"
+      />
+      <p>
+        Our job is to fill your tummy with delicious food and with fast and free delivery.😋
+      </p><span>To learn more about our services,</span>
+      <strong><a
+        href="https://www.bing.com/ck/a?!&&p=ae20c978af3557ebJmltdHM9MTY3NDYwNDgwMCZpZ3VpZD0xNDc5Y2JkNi1kMDZmLTY0ODYtMTI1ZC1kOWYwZDE3ZDY1NGImaW5zaWQ9NTE3OA&ptn=3&hsh=3&fclid=1479cbd6-d06f-6486-125d-d9f0d17d654b&psq=food+delivery+wikipedia&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRm9vZF9kZWxpdmVyeQ&ntb=1"
+        target="_blank"
+        class="learn-more" >
+        Click here👈
+      </a></strong><br>
+      <button class="buy-button">
+        👉 Order now
+      </button>
+      <p class="footer">
+        This page was built by
+        <em><a href="https://www.twitter.com/Glorykach" target="_blank">
+          Onyeka Glory Onwubalili
+        </a></em>
+      </p>
+    </div>
+    <script>
+      function menu() {
+            alert(
+                "We have Burger🍔,Pizza🍕, Cupcake🍮, Ramen🧆 and Ice-cream🍦 available🤗"
+            );
+        }
+
+        let menuButton = document.querySelector(".menu-button");
+        menuButton.addEventListener("click", menu);
+        function buy() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            let location = prompt("What is your location?");
+            let food = prompt("What food are you ordering?");
+           if (food==="Pizza" || food==="Burger" || food==="Cupcake" || food==="Ramen" || food==="Ice-cream") {
+            alert(
+                "Your order was placed successfully✅ " 
+                + name + 
+                "! We'll be in touch by email! " 
+            );
+           } else {
+            alert(
+                "OOPS!!! " 
+                 + 
+                "That food isn't available currently 😥" 
+            );
+           }
+            
+        }
+
+        let buyButton = document.querySelector(".buy-button");
+        buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
